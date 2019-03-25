@@ -1,5 +1,6 @@
 package com.culinaryrecipes.controller;
 
-public class AccountController {
+public class AccountController 
+{
 
 }
