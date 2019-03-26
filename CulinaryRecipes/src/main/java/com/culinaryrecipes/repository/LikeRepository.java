@@ -8,6 +8,6 @@ import com.culinaryrecipes.model.Like;
 
 public interface LikeRepository extends JpaRepository<Like, Integer> 
 {
-	List<Like> findByDatetimeName(Date datetime);
+	List<Like> findByDatetime(Date datetime);
 	List<Like> findByDatetimeLike(Date datetime);
 }
