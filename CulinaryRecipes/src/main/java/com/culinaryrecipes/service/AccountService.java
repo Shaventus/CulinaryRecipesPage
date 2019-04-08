@@ -1,6 +1,8 @@
 package com.culinaryrecipes.service;
 
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +46,7 @@ public class AccountService implements IAccountService {
 			account.setPassword(passwordEncoder.encode(accountDto.getPassword()));
 			account.setEmail(accountDto.getEmail());
 			account.setEnabled((byte)1);
+			account.setCreationAccountDate(new Date());
 			
 			Role role = roleRepository.getOne(1);
 			account.setRoles(Arrays.asList(role));
