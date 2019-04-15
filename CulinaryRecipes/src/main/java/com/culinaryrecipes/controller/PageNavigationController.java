@@ -10,7 +10,7 @@ public class PageNavigationController
 	@GetMapping("/signinsignup")
 	public String about() 
 	{
-		return "/public/signinsignup.html";
+		return "/public/signinsignup";
 	}
 	
 }
