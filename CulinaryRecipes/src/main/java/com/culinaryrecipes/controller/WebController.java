@@ -29,7 +29,7 @@ public class WebController {
 	}
 	
 	@RequestMapping(value = "/AjaxTest", produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET)
-    public @ResponseBody String pobierzProdukty(){             
+    public @ResponseBody String pobierzProdukty(){
         return "Test";
     }
 
