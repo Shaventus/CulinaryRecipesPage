@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PageNavigationController 
 {
-	/*
-	@GetMapping("/signinsignup")
-	public String about() 
+	@GetMapping("/home")
+	public String home() 
 	{
-		return "/public/signinsignup";
+		return "pages/public/index";
 	}
-	*/
+
 	
 	@RequestMapping(value = "/signinsignup", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
