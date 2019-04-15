@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PageNavigationController 
 {
-	@GetMapping("/home")
+	@GetMapping("/public/home")
 	public String home() 
 	{
 		return "pages/public/index";
