@@ -3,6 +3,13 @@
 <meta charset="utf-8">
 	<head th:replace="view/view:: header-css">
 	
+<style th:inline="text">
+    body{
+        background: url{[[@{/resources/media/food1.jpg}]]}
+                    no-repeat center center fixed;
+    }
+</style>
+	
 <body>
 	
 	 <div th:replace="view/view:: header"></div>
@@ -11,23 +18,26 @@
 	 <div class="container">
 	 <div class="text-center">
 	       <div class="row">
+
         <div class="col-md-6">
-        <h3>Sign up</h3>
-    <form class="form-signin">
+          <h3>Sign up</h3>
+   <form class="form-signup">
   <label for="inputUsername" class="sr-only">Username</label>
   <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <br>
-  <button class="btn btn-lg btn-danger" type="submit">Sign up</button>
-  <br><br>
-    <h6> or </h6>
+  <label for="inputEmail" class="sr-only">Email</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email">
+   <br>
+   <button class="btn btn-lg btn-danger" type="submit">Sign up</button>
+   <br><br>
+   <h6> or </h6>
    <h6> Sign in here </h6>
    <br><br>
   	<a class="btn btn-lg btn-primary" href="signin" role="button">Sign in</a>	 
-</form>
-</div>
-
+</form>       
+              
+</div>	
 <div class="col-md-6">
  <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark">
     <div class="col-md-12 px-0">
@@ -39,9 +49,9 @@
        <p>Rate and comment submitted recipes and share your knowledge!</p>
     </div>
   </div>
-</div>	
+</div>
 
-</div>  	
+</div>  
 </div>	
 </div>
 	  
@@ -49,6 +59,7 @@
 
 	 <div class="container">
 	 		<div th:replace="view/view:: footer"></div>
- 	 </div>      
+ 	 </div>  
+ 
 </body>	
 </html>	

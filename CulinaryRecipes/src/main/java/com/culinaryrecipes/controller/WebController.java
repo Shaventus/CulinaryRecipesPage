@@ -28,6 +28,18 @@ public class WebController {
 	    return "pages/public/index";
 	}
 	
+	@GetMapping("/user/index")
+	public String userIndex() {
+
+	    return "pages/user/index";
+	}
+	
+	@GetMapping("/admin/index")
+	public String adminIndex() {
+
+	    return "pages/admin/index";
+	}
+	
 	@RequestMapping(value = "/AjaxTest", produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET)
     public @ResponseBody String pobierzProdukty(){
         return "Test";

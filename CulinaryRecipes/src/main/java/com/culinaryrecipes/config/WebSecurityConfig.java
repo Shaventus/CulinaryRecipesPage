@@ -29,9 +29,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		return encoder;
 	}
 	
+	@Autowired
+	private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
+	
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-		
 	  auth.jdbcAuthentication().dataSource(dataSource)
 	  	.rolePrefix("ROLE_")
 		.usersByUsernameQuery(
@@ -53,7 +55,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
-				.loginPage("/signinsignup")
+				.loginPage("/login")
+				.successHandler(customAuthenticationSuccessHandler)
+            	.usernameParameter("username")
+            	.passwordParameter("password")
+				//.loginProcessingUrl("/public/login")
 				.permitAll()
 				.and()
 			.logout()
