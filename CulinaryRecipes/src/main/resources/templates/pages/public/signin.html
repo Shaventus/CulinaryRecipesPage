@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 	<head th:replace="view/view:: header-css">
 	
-<body>
+<body th:style="'background:url(' + @{/resources/media/food2.jpg} + ');'" >
 	
 	 <div th:replace="view/view:: header"></div>
 	 
@@ -12,6 +12,7 @@
 	 <div class="text-center">
 	       <div class="row">
         <div class="col-md-6">
+        <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark">
         <h3>Sign in</h3>
   <form class="form-signin" th:action="@{/login}" method="POST">
   <label for="inputUsername" class="sr-only">Username</label>
@@ -27,6 +28,7 @@
   	<a class="btn btn-lg btn-primary" href="signup" role="button">Sign up</a>	 
 </form>
 </div>
+</div>
 
 <div class="col-md-6">
  <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark">
@@ -38,6 +40,7 @@
      <h3 style="color:#ff471a"><i class="fas fa-star-half-alt"></i>Rate recipes</h3>
        <p>Rate and comment submitted recipes and share your knowledge!</p>
     </div>
+    <br><br>
   </div>
 </div>	
 

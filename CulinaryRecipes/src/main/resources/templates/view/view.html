@@ -38,26 +38,26 @@
         <li class="nav-item active">
           <a class="nav-link" th:href="@{/public/home}"><i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Recipes</a>
+         <li class="nav-item active">
+          <a class="nav-link disabled" href="#"><i class="fas fa-utensils"> Recipes</i></a>
         </li>
-          <li class="nav-item">
-          <a class="nav-link disabled" href="#">Ingredients</a>
+          <li class="nav-item active">
+          <a class="nav-link disabled" href="#"><i class="fas fa-fish"> Ingredients </i></a>
         </li> 
-         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Community</a>
-        </li>      
+         <li class="nav-item active">
+          <a class="nav-link disabled" href="#"><i class="fas fa-users"> Community</i></a>
+        </li>   
         <li class="nav-item"> 
-          <a class="nav-link" th:href="@{/public/signin}">Sign in</a>
+          <a class="nav-link" th:href="@{/public/signin}"> <i class="fas fa-sign-in-alt"> Sign in</i></a>
         </li>
           <li class="nav-item"> 
-          <a class="nav-link" th:href="@{/public/signup}">Sign up</a>
+          <a class="nav-link" th:href="@{/public/signup}"> <i class="fas fa-file-signature"> Sign up </i></a>
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-warning my-2 my-sm-0" data-toggle="popover" 
-			data-content="Sign in first please." type="submit">Search</button>
+			data-content="Sign in first please." type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
     </div>
@@ -68,8 +68,8 @@
 
     <footer th:fragment="footer">
     <div class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2019 CulinaryRecipes, Inc. &middot; <a th:href="@{/public/privacy}">Privacy</a> &middot; <a th:href="@{/public/terms}">Terms</a></p>
+    <p class="float-right"><a href="#"><i class="fas fa-arrow-up"> Back to top</i></a></p>
+    <p><i class="fas fa-copyright"> 2019 CulinaryRecipes, Inc. </i>  &middot; <a th:href="@{/public/privacy}"><i class="far fa-list-alt"> Privacy </i></a> &middot; <a th:href="@{/public/terms}"><i class="fas fa-book-reader"> Terms</i></a></p>
     </div>
   </footer>
 

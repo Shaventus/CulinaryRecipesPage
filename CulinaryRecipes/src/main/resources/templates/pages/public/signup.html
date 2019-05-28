@@ -10,7 +10,7 @@
     }
 </style>
 	
-<body>
+<body th:style="'background:url(' + @{/resources/media/food1.jpg} + ');'" >
 	
 	 <div th:replace="view/view:: header"></div>
 	 
@@ -20,6 +20,7 @@
 	       <div class="row">
 
         <div class="col-md-6">
+        <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark">
           <h3>Sign up</h3>
    <form class="form-signup">
   <label for="inputUsername" class="sr-only">Username</label>
@@ -36,7 +37,7 @@
    <br><br>
   	<a class="btn btn-lg btn-primary" href="signin" role="button">Sign in</a>	 
 </form>       
-              
+     </div>        
 </div>	
 <div class="col-md-6">
  <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark">
@@ -48,6 +49,7 @@
      <h3 style="color:#ff471a"><i class="fas fa-star-half-alt"></i>Rate recipes</h3>
        <p>Rate and comment submitted recipes and share your knowledge!</p>
     </div>
+     <br><br><br>
   </div>
 </div>
 

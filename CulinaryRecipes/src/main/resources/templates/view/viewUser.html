@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-  <head th:fragment="header-css"> 		
+ <head th:fragment="header-css"> 		
   		<title>CulinaryRecipes</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		  <!-- Required meta tags -->
@@ -10,10 +10,16 @@
 		
 		<!-- Bootstrap CSS -->
 	   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	   	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
 	   	<!-- CSS -->
 	   	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+	   	<link rel="stylesheet" type="text/css" th:href="@{/css/carousel.css}"/>
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>		
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"/></script>
+	    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery.min.js"><\script>')</script>
+	    <script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
  
   <body>
@@ -31,24 +37,24 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" th:href="@{/user/home}"><i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+          <a class="nav-link" th:href="@{/user/home}"><i class="fas fa-home"> Home</i><span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Recipes</a>
+       <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-utensils"> Recipes</i></a>
         </li>
-          <li class="nav-item">
-          <a class="nav-link" href="#">Ingredients</a>
+          <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-fish"> Ingredients </i></a>
         </li> 
-         <li class="nav-item">
-          <a class="nav-link" href="#">Community</a>
+         <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-users"> Community</i></a>
         </li>   
-         <li class="nav-item">
-          <a class="nav-link" href="#">My Account</a>
-        </li>        
+         <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-address-card"> My Account</i></a>
+        </li>     
       </ul>
       <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
     </div>
@@ -60,8 +66,8 @@
 
    <footer th:fragment="footer">
     <div class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2019 CulinaryRecipes, Inc. &middot; <a th:href="@{/user/privacy}">Privacy</a> &middot; <a th:href="@{/user/terms}">Terms</a></p>
+    <p class="float-right"><a href="#"><i class="fas fa-arrow-up"> Back to top</i></a></p>
+    <p><i class="fas fa-copyright"> 2019 CulinaryRecipes, Inc. </i>  &middot; <a th:href="@{/user/privacy}"><i class="far fa-list-alt"> Privacy </i></a> &middot; <a th:href="@{/user/terms}"><i class="fas fa-book-reader"> Terms</i></a></p>
     </div>
   </footer>
     

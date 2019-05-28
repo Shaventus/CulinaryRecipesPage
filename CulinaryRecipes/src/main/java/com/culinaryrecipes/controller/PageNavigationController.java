@@ -67,6 +67,36 @@ public class PageNavigationController
 		return "pages/admin/privacy";
 	}
 	
+	@GetMapping("/admin/recipes")
+	public String recipesAdmin() 
+	{
+		return "pages/admin/recipes";
+	}
+	
+	@GetMapping("/admin/ingredients")
+	public String ingredientsAdmin() 
+	{
+		return "pages/admin/ingredients";
+	}
+	
+	@GetMapping("/admin/community")
+	public String communityAdmin() 
+	{
+		return "pages/admin/community";
+	}
+	
+	@GetMapping("/admin/myAccount")
+	public String myAccountAdmin() 
+	{
+		return "pages/admin/myAccount";
+	}
+	
+	@GetMapping("/admin/areaAdmin")
+	public String areaAdmin() 
+	{
+		return "pages/admin/areaAdmin";
+	}
+	
 	/**
 	 * user
 	 * @return
@@ -90,4 +120,28 @@ public class PageNavigationController
 		return "pages/user/privacy";
 	}
 	
+	@GetMapping("/user/recipes")
+	public String recipesUser() 
+	{
+		return "pages/user/recipes";
+	}
+	
+	@GetMapping("/user/ingredients")
+	public String ingredientsUser() 
+	{
+		return "pages/user/ingredients";
+	}
+	
+	@GetMapping("/user/community")
+	public String communityUser() 
+	{
+		return "pages/user/community";
+	}
+	
+	@GetMapping("/user/myAccount")
+	public String myAccountUser() 
+	{
+		return "pages/user/myAccount";
+	}
+		
 }

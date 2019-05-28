@@ -1,20 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-<meta charset="utf-8">
-	<head th:replace="view/viewAdmin:: header-css">
-	
-<body>
-	
-	 <div th:replace="view/viewAdmin:: header"></div>
-	 
-	 <div class="container">
-	  	
-	 </div>
-	  
-	  
+<head th:replace="view/viewAdmin:: header-css">
+ 
+  <body>
+  <head th:replace="view/viewAdmin:: header-css">
+  
+<main role="main">
 
-	 <div class="container">
+   <div th:replace="view/viewAdmin:: header"> </div>
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Most popular recipe 1.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <center><p><i class="fas fa-heart"></i> 0 </p></center>
+           <center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Read more...</button></center>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Most popular recipe 2.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+           <center><p><i class="fas fa-heart"></i> 0 </p></center>
+          <center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Read more...</button></center>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>Most popular recipe 3.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <center><p><i class="fas fa-heart"></i> 0 </p></center>
+              <center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Read more...</button></center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+ <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+            <h5>Ingredient of the Week</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <button class="btn btm-sm btn-danger my-2 my-sm-0" data-toggle="popover" 
+			data-content="Sign in first please." type="submit">Learn more</button>
+                </div>
+                <small class="text-muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+                 <h5>Country of the Week</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <button class="btn btm-sm btn-danger my-2 my-sm-0" data-toggle="popover" 
+			data-content="Sign in first please." type="submit">Learn more</button>
+                </div>
+                <small class="text-muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+             <h5>Easy recipes of the Week</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <button class="btn btm-sm btn-danger my-2 my-sm-0" data-toggle="popover" 
+			data-content="Sign in first please." type="submit">Learn more</button>
+                </div>
+                <small class="text-muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+  
+      <div class = "container"> 
+   <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+    
+	<center><h3>Recent recipes</h3></center>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Recipe 1. <span class="text-muted">Name.</span></h2>
+        <small>00-00-00 00:00:00</small>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <center><i class="fas fa-heart"></i> 0 </center>
+        <p><center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Read more...</button></center></p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Recipe 2. <span class="text-muted">Name.</span></h2>
+        <small>00-00-00 00:00:00</small>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <center><i class="fas fa-heart"></i> 0 </center>
+       <p><center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Read more...</button></center></p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Recipe 3. <span class="text-muted">Name.</span></h2>
+       <small>00-00-00 00:00:00</small>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <center><i class="fas fa-heart"></i> 0 </center>
+        <p><center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Read more...</button></center></p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+</div>
+ <hr class="featurette-divider">
+ 
+     <center><button type="button" class="btn btn-danger" data-toggle="popover" 
+			data-content="Sign in first please.">Show more recent recipes</button></center>
+
+    <hr class="featurette-divider">
+    
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+			$(document).ready(function(){
+			    $('[data-toggle="popover"]').popover();   
+			});
+     	 /*]]>*/
+		</script>  
+		
+    
+ <div class="container">
 	 		<div th:replace="view/viewAdmin:: footer"></div>
- 	 </div>      
-</body>	
-</html>	
+ </div>
+  
+</main>
+</head>
+</html>
+
