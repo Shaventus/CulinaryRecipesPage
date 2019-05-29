@@ -40,20 +40,23 @@
           <a class="nav-link" th:href="@{/admin/home}"><i class="fas fa-home"> Home</i> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="@{/admin/recipes}"><i class="fas fa-utensils"> Recipes</i></a>
+          <a class="nav-link" th:href="@{/admin/recipes}"><i class="fas fa-utensils"> Recipes</i></a>
         </li>
           <li class="nav-item active">
-          <a class="nav-link" href="@{/admin/ingredients}"><i class="fas fa-fish"> Ingredients </i></a>
+          <a class="nav-link" th:href="@{/admin/ingredients}"><i class="fas fa-fish"> Ingredients </i></a>
         </li> 
          <li class="nav-item active">
-          <a class="nav-link" href="@{/admin/community}"><i class="fas fa-users"> Community</i></a>
+          <a class="nav-link" th:href="@{/admin/community}"><i class="fas fa-users"> Community</i></a>
         </li>   
          <li class="nav-item active">
-          <a class="nav-link" href="@{/admin/myAccount}"><i class="fas fa-address-card"> My Account</i></a>
+          <a class="nav-link" th:href="@{/admin/myAccount}"><i class="fas fa-address-card"> My Account</i></a>
         </li>    
          <li class="nav-item active">
-          <a class="nav-link" href="@{/admin/areaAdmin}"><i class="fas fa-users-cog"> Admin Area</i></a>
+          <a class="nav-link" th:href="@{/admin/areaAdmin}"><i class="fas fa-users-cog"> Admin Area</i></a>
         </li>    
+          <li class="nav-item">
+          <a class="nav-link" th:href="@{/logout}"><i class="fas fa-sign-out-alt"></i></a>
+        </li> 
       </ul>
       <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
