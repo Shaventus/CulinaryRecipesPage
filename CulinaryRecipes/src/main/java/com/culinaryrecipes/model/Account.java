@@ -19,9 +19,6 @@ public class Account implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idAccount;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creationAccountDate;
-
 	private String email;
 
 
@@ -59,14 +56,6 @@ public class Account implements Serializable {
 
 	public void setIdAccount(int idAccount) {
 		this.idAccount = idAccount;
-	}
-
-	public Date getCreationAccountDate() {
-		return this.creationAccountDate;
-	}
-
-	public void setCreationAccountDate(Date creationAccountDate) {
-		this.creationAccountDate = creationAccountDate;
 	}
 
 	public String getEmail() {

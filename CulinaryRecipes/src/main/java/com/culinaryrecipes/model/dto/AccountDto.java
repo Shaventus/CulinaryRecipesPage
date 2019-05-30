@@ -2,9 +2,9 @@ package com.culinaryrecipes.model.dto;
 
 import java.util.Date;
 
-public class AccountDto {
+import com.culinaryrecipes.model.Account;
 
-	private Date creationAccountDate;
+public class AccountDto {
 
 	private String email;
 
@@ -16,23 +16,17 @@ public class AccountDto {
 
 
 	private String username;
-
-
-	/**
-	 * @return the creationAccountDate
-	 */
-	public Date getCreationAccountDate() {
-		return creationAccountDate;
+	
+	public AccountDto() {
+		
 	}
-
-
-	/**
-	 * @param creationAccountDate the creationAccountDate to set
-	 */
-	public void setCreationAccountDate(Date creationAccountDate) {
-		this.creationAccountDate = creationAccountDate;
+	
+	public AccountDto(Account account) {
+		this.username = account.getUsername();
+		this.password = account.getPassword();
+		this.email = account.getEmail();
+		this.enabled = account.getEnabled();
 	}
-
 
 	/**
 	 * @return the email

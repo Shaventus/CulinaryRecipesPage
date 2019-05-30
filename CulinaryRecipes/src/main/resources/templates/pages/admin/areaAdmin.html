@@ -13,14 +13,12 @@
 	
 	<h4>Stats</h4>
 	
-	
-	
 	<h4>Users list</h4>
 	
 	    <div class="container h-100">
       <div class="d-flex justify-content-center h-100">
         <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
+          <input class="search_input" type="text" id="search" name="" placeholder="Search...">
           <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
       </div>
@@ -36,34 +34,8 @@
       <th scope="col"></th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>NoName1</td>
-      <td>noname1@mail</td>
-      <td>User</td>
-      <td>   <button type="button" class="btn btn-primary">Edit</button> 
-      		 <button type="button" class="btn btn-danger">Delete</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>NoName2</td>
-      <td>noname2@mail</td>
-      <td>User</td>
-       <td>   <button type="button" class="btn btn-primary">Edit</button> 
-      		 <button type="button" class="btn btn-danger">Delete</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>NoName3</td>
-      <td>noname3@mail</td>
-      <td>User</td>
-       <td>   <button type="button" class="btn btn-primary">Edit</button> 
-      		 <button type="button" class="btn btn-danger">Delete</button>
-      </td>    
-      </tr>
+  <tbody class="wrap">
+
   </tbody>
 </table>
 
@@ -74,6 +46,33 @@
 <div class="container">
 	 <div th:replace="view/viewAdmin:: footer"></div>
 </div>  
+
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+			$(document).ready(function(){
+				var dataA = null;
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/accountAll",
+					dataType: "json",
+					success: function(data){
+							dataA = data;
+							console.log(data);
+							for(i = 0; i < data.length; i++){
+								console.log(i +", username:" + data[i].username + ", email:" + data[i].email);
+								var el = '<tr><th scope="row">' + i +'</th><td>' + data[i].username + '</td><td>' + data[i].email + '</td><td>User</td><td><button type="button" class="btn btn-primary">Edit</button><button type="button" class="btn btn-danger">Delete</button></td></tr>';
+							    $(el).hide().prependTo('.wrap').fadeIn(1000);
+							    $(el).hide().prependTo('.wrap').fadeOut(1000);
+							}
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+			});
+     	 /*]]>*/
+		</script>  
  
 </body>	
 </html>	
