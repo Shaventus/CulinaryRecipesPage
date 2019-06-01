@@ -46,7 +46,7 @@ public class AccountService implements IAccountService {
 			account.setPassword(passwordEncoder.encode(accountDto.getPassword()));
 			account.setEmail(accountDto.getEmail());
 			account.setEnabled((byte)1);
-			account.setCreationAccountDate(new Date());
+			//account.setCreationAccountDate(new Date());
 			
 			Role role = roleRepository.getOne(1);
 			account.setRoles(Arrays.asList(role));
