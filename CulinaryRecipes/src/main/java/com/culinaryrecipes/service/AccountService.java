@@ -46,7 +46,6 @@ public class AccountService implements IAccountService {
 			account.setPassword(passwordEncoder.encode(accountDto.getPassword()));
 			account.setEmail(accountDto.getEmail());
 			account.setEnabled((byte)1);
-			account.setCreationAccountDate(new Date());
 			
 			Role role = roleRepository.getOne(1);
 			account.setRoles(Arrays.asList(role));
@@ -79,6 +78,16 @@ public class AccountService implements IAccountService {
 	@Override
 	public boolean isAccountExist(String username) {
 		return accountRepository.findByUsername(username) != null;
+	}
+	
+	@Override
+	public List<Account> findByUsernameLike(String username) {
+		return accountRepository.findByUsernameLike(username);
+	}
+
+	@Override
+	public int getCount() {
+		return Math.toIntExact(accountRepository.count());
 	}
 	
 }

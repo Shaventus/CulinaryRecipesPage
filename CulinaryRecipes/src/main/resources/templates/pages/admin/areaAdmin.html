@@ -19,7 +19,7 @@
         <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content dark-blue">
              <div class="circle-tile-description text-faded">Accounts</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded" id="accountCount"></div>
         </div>
       </div>
     </div>
@@ -116,6 +116,7 @@
 
 		<script th:inline="javascript">
 		/*<![CDATA[*/
+		/*<![CDATA[*/
 			$(document).ready(function(){
 				var dataA = null;
 				$.ajax({
@@ -127,13 +128,84 @@
 							console.log(data);
 							for(i = 0; i < data.length; i++){
 								console.log(i +", username:" + data[i].username + ", email:" + data[i].email);
-								var el = '<tr><th scope="row">' + i +'</th><td>' + data[i].username + '</td><td>' + data[i].email + '</td><td>User</td><td><button type="button" class="btn btn-dark">Edit</button><button type="button" class="btn btn-danger">Delete</button></td></tr>';
+								var el = '<tr><th scope="row">' + i +'</th><td>' + data[i].username + '</td><td>' + data[i].email + '</td><td>User</td><td><button type="button" class="btn btn-primary">Edit</button><button type="button" class="btn btn-danger">Delete</button></td></tr>';
 							    $(el).hide().prependTo('.wrap').fadeIn(1000);
 							    $(el).hide().prependTo('.wrap').fadeOut(1000);
 							}
 						},
 					error: function(data){
 							console.log("Error");
+						}
+					});
+
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/accountcount",
+					dataType: "json",
+					success: function(data){
+								console.log("el: " + data);
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#accountCount').fadeIn(1000);
+							    $(el).hide().prependTo('#accountCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$("#search").on('input', function(){
+					var search = $(this).val();
+					console.log(search);
+					console.log(search.length);
+					if(search.length > 2){
+						$('.wrap').html('');
+						
+						$.ajax({
+							type: "Get",
+							url: "/CulinaryRecipes/ajax/admin/search",
+							dataType: "json",
+							data:{
+								search: search
+							},
+							success: function(data){
+									dataA = data;
+									console.log(data);
+									for(i = 0; i < data.length; i++){
+										console.log(i +", username:" + data[i].username + ", email:" + data[i].email);
+										var el = '<tr><th scope="row">' + i +'</th><td>' + data[i].username + '</td><td>' + data[i].email + '</td><td>User</td><td><button type="button" class="btn btn-primary">Edit</button><button type="button" class="btn btn-danger">Delete</button></td></tr>';
+									    $(el).hide().prependTo('.wrap').fadeIn(1000);
+									    $(el).hide().prependTo('.wrap').fadeOut(1000);
+									}
+								},
+							error: function(data){
+									console.log("Error");
+								}
+							});
+					} else if(search.length == 0){
+						$('.wrap').html('');
+						
+						$.ajax({
+							type: "Get",
+							url: "/CulinaryRecipes/ajax/admin/search",
+							dataType: "json",
+							data:{
+								search: search
+							},
+							success: function(data){
+									dataA = data;
+									console.log(data);
+									for(i = 0; i < data.length; i++){
+										console.log((i+1) +", username:" + data[i].username + ", email:" + data[i].email);
+										var el = '<tr><th scope="row">' + i +'</th><td>' + data[i].username + '</td><td>' + data[i].email + '</td><td>User</td><td><button type="button" class="btn btn-primary">Edit</button><button type="button" class="btn btn-danger">Delete</button></td></tr>';
+									    $(el).hide().prependTo('.wrap').fadeIn(1000);
+									    $(el).hide().prependTo('.wrap').fadeOut(1000);
+									}
+								},
+							error: function(data){
+									console.log("Error");
+								}
+							});
 						}
 					});
 

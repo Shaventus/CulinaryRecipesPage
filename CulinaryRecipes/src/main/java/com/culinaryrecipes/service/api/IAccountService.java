@@ -20,5 +20,9 @@ public interface IAccountService {
 	List<Account> findByUsername(String username);
 	
 	boolean isAccountExist(String username);
+	
+	List<Account> findByUsernameLike(String username);
+	
+	int getCount();
 
 }

@@ -36,11 +36,21 @@ public class AccountController
     }
 	
 	@RequestMapping("/ajax/admin/search")
-	public @ResponseBody List searchPost(@RequestParam("search") String query) {
+	public ResponseEntity<?> searchPost(@RequestParam("search") String username) {
 
-	    List<Account> result = accountService.findByUsername(query);
+		List<AccountDto> list = new ArrayList<AccountDto>();
+		List<Account> accountList = accountService.findByUsernameLike(username.concat("%"));
+		
+		for(Account account : accountList){
+			list.add(new AccountDto(account));
+		}
 
-	    return result;
+        return ResponseEntity.ok(list);
 	}
+	
+	@RequestMapping("/ajax/accountcount")
+	public ResponseEntity<?> accountCount() {
 
+        return ResponseEntity.ok(accountService.getCount());
+	}
 }
