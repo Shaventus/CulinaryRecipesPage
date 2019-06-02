@@ -12,21 +12,135 @@
 <div class="container">
 	
 	<h4><i class="fas fa-fish"> Ingredients</i></h4>
-	<hr>
-<ul class="nav nav-pills nav-justified">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Rice</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active"  href="#">Pasta</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link active"  href="#">Meat</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active"  href="#">Fish</a>
-  </li>
-</ul>
+<hr>
+<h5><i class="fas fa-search"> Advanced search</i></h5>
+
+	<div class="row">
+		<div class="col-md-12">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Search" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">  
+                                    <label for="filter">Filter by type</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Vegan</option>
+                                        <option value="1">Vegetarian</option>
+                                        <option value="2">Gluten Free</option>            
+                                    </select>
+                                       <label for="filter">Filter by main ingredient</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Fish</option>
+                                        <option value="1">Meat</option>
+                                        <option value="2">Vegetables</option>   
+                                        <option value="3">Rice</option>   
+                                        <option value="4">Pasta</option>            
+                                    </select>
+                                  <div class="form-group">
+                                    <label for="contain">Ingredients</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                  <button type="submit" class="btn btn-info"><span><i class="fas fa-search"></i></span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info"><span><i class="fas fa-search"></i></span></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+	
+<hr>
+<h5><i class="fas fa-cookie-bite"> Recipes</i></h5>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+       <center> <p> <i class="fas fa-heart"> 666 </i> <i class="fas fa-comment"> 66</i> </p></center>
+      </td>
+      <td><i class="fas fa-signature"> Name</i>
+      	<p>Short decription</p>
+      </td>
+        <td>
+        <p> <i class="fas fa-fish"> Main ingredient: </i></p>
+ 		<p> <i class="fas fa-carrot"> Ingredients: </i></p>
+ 		<p> <i class="fas fa-seedling"> Vegetarian/vegan info </i></p>
+        </td>
+          <td>
+       <p><i class="fas fa-calendar-alt"> Date: 00-00-00</i></p>
+       <p><i class="fas fa-user"> By:</i></p>
+        <p><button type="button" class="btn btn-info">Learn more</button></p>
+          </td>
+    </tr>
+    <tr>
+       <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      <center> <p> <i class="fas fa-heart"> 666 </i>  <i class="fas fa-comment"> 66</i></p></center>
+       </td>
+      <td><i class="fas fa-signature"> Name</i>
+      	<p>Short decription</p>
+      </td>
+       <td>
+          <p> <i class="fas fa-fish"> Main ingredient: </i></p>
+ 		<p> <i class="fas fa-carrot"> Ingredients: </i></p>
+ 		<p> <i class="fas fa-seedling"> Vegetarian/vegan info </i></p>
+        </td>
+          <td>
+          <p><i class="fas fa-calendar-alt"> Date: 00-00-00</i></p>
+         <p><i class="fas fa-user"> By:</i></p>
+         <p><button type="button" class="btn btn-info">Learn more</button></p>
+          </td>
+    </tr>
+    <tr>
+       <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+         <center><p> <i class="fas fa-heart"> 666 </i>  <i class="fas fa-comment"> 66</i></p></center>
+       </td>
+      <td><i class="fas fa-signature"> Name</i>
+      	<p>Short decription</p>
+      </td>  
+        <td>
+           <p> <i class="fas fa-fish"> Main ingredient: </i></p>
+ 		<p> <i class="fas fa-carrot"> Ingredients: </i></p>
+ 		<p> <i class="fas fa-seedling"> Vegetarian/vegan info </i></p>
+        </td>
+          <td>
+         <p><i class="fas fa-calendar-alt"> Date: 00-00-00</i></p>
+          <p><i class="fas fa-user"> By:</i></p>
+            <p><button type="button" class="btn btn-info">Learn more</button></p>
+          </td>
+    </tr>  
+  </tbody>
+</table>
+ <nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <span class="page-link">Previous</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">
+        2
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 
 </div>
 

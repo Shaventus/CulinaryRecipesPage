@@ -29,41 +29,134 @@
 </ul>
 
 <hr>
-<h5><i class="fas fa-cookie-bite"> All Recipes </i></h5>
+<h5><i class="fas fa-search"> Advanced search</i></h5>
+
+	<div class="row">
+		<div class="col-md-12">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Search" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">  
+                                    <label for="filter">Filter by difficulty [1-5]</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>1</option>
+                                        <option value="1">2</option>
+                                        <option value="2">3</option>  
+                                        <option value="3">4</option> 
+                                        <option value="4">5</option>           
+                                    </select>
+                                       <label for="filter">Filter by country</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Fish</option>
+                                        <option value="1">Meat</option>
+                                        <option value="2">Vegetables</option>   
+                                        <option value="3">Rice</option>   
+                                        <option value="4">Pasta</option>            
+                                    </select>
+                                        <label for="filter">Preparing time</label>
+                                        <select class="form-control">
+                                        <option value="0" selected>Fish</option>
+                                        <option value="1">Meat</option>
+                                        <option value="2">Vegetables</option>   
+                                        <option value="3">Rice</option>   
+                                        <option value="4">Pasta</option>            
+                                    </select>
+                                      <div class="form-group">
+                                    <label for="contain">Author</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="contain">Ingredients</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                  <button type="submit" class="btn btn-info"><span><i class="fas fa-search"></i></span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info"><span><i class="fas fa-search"></i></span></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+<hr>
+<h5><i class="fas fa-cookie-bite"> Recipes </i></h5>
 
 <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col"></th>
       <th scope="col"></th>
-      <th scope="col"><i class="fas fa-star"></i></th>
-      <th scope="col"><i class="fas fa-globe-americas"></i></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg></td>
-      <td><p>Name</p>
-      	<p>Decription</p>
+      <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+       <center> <p> <i class="fas fa-heart"> 666 </i> <i class="fas fa-comment"> 66</i> </p></center>
       </td>
-        <td>1</td>
-          <td>Country</td>
+      <td><i class="fas fa-signature"> Name</i>
+      	<p>Short decription</p>
+      </td>
+        <td>
+        <p><i class="fas fa-star"> 3 </i></p>
+        <p><i class="fas fa-globe-americas"> Japan</i></p>
+        <p><i class="fas fa-utensils"> Breakfast</i></p>
+        <p><i class="fas fa-hourglass-half"> 50 min</i></p>
+        <p><i class="fas fa-male"> 2</i></p>
+        </td>
+          <td>
+       <p><i class="fas fa-calendar-alt"> Date: 00-00-00</i></p>
+       <p><i class="fas fa-user"> By:</i></p>
+        <p><button type="button" class="btn btn-info">Learn more</button></p>
+          </td>
     </tr>
     <tr>
-       <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg></td>
-      <td><p>Name</p>
-      	<p>Decription</p>
+       <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      <center> <p> <i class="fas fa-heart"> 666 </i>  <i class="fas fa-comment"> 66</i></p></center>
+       </td>
+      <td><i class="fas fa-signature"> Name</i>
+      	<p>Short decription</p>
       </td>
-        <td>5</td>
-          <td>Country</td>
+       <td>
+        <p><i class="fas fa-star"> 4 </i></p>
+        <p><i class="fas fa-globe-americas"> US</i></p>
+        <p><i class="fas fa-utensils"> Breakfast</i></p>
+        <p><i class="fas fa-hourglass-half"> 50 min</i></p>
+        <p><i class="fas fa-male"> 4</i></p>
+        </td>
+          <td>
+          <p><i class="fas fa-calendar-alt"> Date: 00-00-00</i></p>
+         <p><i class="fas fa-user"> By:</i></p>
+         <p><button type="button" class="btn btn-info">Learn more</button></p>
+          </td>
     </tr>
     <tr>
-       <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg></td>
-      <td><p>Name</p>
-      	<p>Decription</p>
+       <td>  <svg class="bd-placeholder-img card-img-top" width="250" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+         <center><p> <i class="fas fa-heart"> 666 </i>  <i class="fas fa-comment"> 66</i></p></center>
+       </td>
+      <td><i class="fas fa-signature"> Name</i>
+      	<p>Short decription</p>
       </td>  
-        <td>2</td>
-          <td>Country</td>
+        <td>
+         <p><i class="fas fa-star"> 2 </i></p>
+         <p><i class="fas fa-globe-americas"> China</i></p>
+         <p><i class="fas fa-utensils"> Breakfast</i></p>
+         <p><i class="fas fa-hourglass-half"> 50 min</i></p>
+         <p><i class="fas fa-male"> 4</i></p>
+        </td>
+          <td>
+         <p><i class="fas fa-calendar-alt"> Date: 00-00-00</i></p>
+          <p><i class="fas fa-user"> By:</i></p>
+            <p><button type="button" class="btn btn-info">Learn more</button></p>
+          </td>
     </tr>  
   </tbody>
 </table>
