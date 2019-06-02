@@ -63,6 +63,11 @@ public class RecipeController {
 		return "pages/admin/addRecipe";
 	}
 	
+	@GetMapping("/admin/recipeDetails")
+	public String recipeDetails() 
+	{
+		return "pages/admin/recipeDetails";
+	}
 	
 
 }

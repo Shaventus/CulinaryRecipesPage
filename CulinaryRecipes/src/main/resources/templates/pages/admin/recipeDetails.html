@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+	<head th:replace="view/viewAdmin:: header-css">
+	
+  	
+<body>
+	
+	 <div th:replace="view/viewAdmin:: header"></div>
+	 
+<br><br>
+<div class="container">
+	
+	<h4><i class="fas fa-utensils"> Name</i></h4>
+	<p><i class="fas fa-user"> By:</i></p>
+	<p> <i class="fas fa-heart"> 666 </i>  <i class="fas fa-comment"> 66</i></p>
+    <p><button type="button" class="btn btn-info"> <i class="fas fa-plus"></i> Add to favourites</button></p>
+	<hr>
+	   <div class="row">
+      <div class="col-md-6">
+ <svg class="bd-placeholder-img card-img-top" width="320" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+	</div>
+	  <div class="col-md-4">
+	  <br><br>
+	     <p><i class="fas fa-star"> 2 </i></p>
+         <p><i class="fas fa-globe-americas"> China</i></p>
+         <p><i class="fas fa-utensils"> Breakfast</i></p>
+         <p><i class="fas fa-hourglass-half"> 50 min</i></p>
+         <p><i class="fas fa-male"> 4</i></p>
+	</div>
+	</div>
+	<hr>
+	 <p> <i class="fas fa-fish"> Main ingredient </i></p>
+ 	 <p> <i class="fas fa-carrot"> Ingredients </i></p>
+ 	 <p> <i class="fas fa-seedling"> Vegetarian/vegan info </i></p>
+	<hr>
+	<p><i class="fas fa-sticky-note"> Description</i></p>
+	<p><i class="fas fa-plus-square"> Trivia</i></p>
+	<hr>
+	 <p><button type="button" class="btn btn-info"> Return to recipes</button></p>
+	<hr>
+	<h5><i class="fas fa-comment"> Comments</i></h5>
+	<hr>
+</div>
+
+<br><br><br>  
+
+<div class="container">
+	 <div th:replace="view/viewAdmin:: footer"></div>
+</div>  
+ 
+</body>	
+</html>	
