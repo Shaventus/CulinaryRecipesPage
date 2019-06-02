@@ -2,6 +2,8 @@ package com.culinaryrecipes.model.dto;
 
 import java.util.Date;
 
+import com.culinaryrecipes.model.Recipe;
+
 public class RecipeDto {
 	
 	private String country;
@@ -21,6 +23,22 @@ public class RecipeDto {
 	private String time;
 
 	private String trivia;
+	
+	public RecipeDto() {};
+	
+	public RecipeDto(Recipe recipe) {
+		this.country = recipe.getCountry();
+		this.datetime = recipe.getDatetime();
+		this.description = recipe.getDescription();
+		this.difficulty = recipe.getDifficulty();
+		this.ingredients = recipe.getIngredients();
+		this.mainIngredient = recipe.getMainIngredient();
+		this.photo = recipe.getPhoto();
+		this.time = recipe.getTime();
+		this.trivia = recipe.getTrivia();
+	}
+	
+	
 
 	/**
 	 * @return the country

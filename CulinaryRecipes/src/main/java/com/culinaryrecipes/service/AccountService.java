@@ -1,8 +1,6 @@
 package com.culinaryrecipes.service;
 
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +57,22 @@ public class AccountService implements IAccountService {
 		
 		return account;
 	}
+	
+	public Account updateAccount(AccountDto accountDto) {
+		Account account = accountRepository.getOne(accountDto.getIdAccount());
+
+		try {
+			account.setUsername(accountDto.getUsername());
+			account.setPassword(passwordEncoder.encode(accountDto.getPassword()));
+			account.setEmail(accountDto.getEmail());
+			
+			accountRepository.save(account);
+		} catch(Exception ex) {
+			
+		}
+		
+		return account;
+	}
 
 	@Override
 	public Account getOne(int id) {
@@ -88,6 +102,11 @@ public class AccountService implements IAccountService {
 	@Override
 	public int getCount() {
 		return Math.toIntExact(accountRepository.count());
+	}
+
+	@Override
+	public void changePassword(String password) {
+		
 	}
 	
 }

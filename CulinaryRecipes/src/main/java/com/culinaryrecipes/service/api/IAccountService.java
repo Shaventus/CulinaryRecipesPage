@@ -13,6 +13,8 @@ public interface IAccountService {
 	
 	Account createAccount(AccountDto accountDto);
 	
+	void changePassword(String password);
+	
 	Account getOne(int id);
 	
 	List<Account> findAll();

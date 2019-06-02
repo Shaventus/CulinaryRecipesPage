@@ -30,7 +30,7 @@
         <a href="#"><div class="circle-tile-heading red"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content red">
           <div class="circle-tile-description text-faded">Recipes</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="reciperCount"></div>
         </div>
       </div>
     </div> 
@@ -40,7 +40,7 @@
         <a href="#"><div class="circle-tile-heading blue"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content blue">
           <div class="circle-tile-description text-faded">Breakfast</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="breakfastCount"></div>
         </div>
       </div>
     </div> 
@@ -50,7 +50,7 @@
         <a href="#"><div class="circle-tile-heading orange"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content orange">
           <div class="circle-tile-description text-faded">Soups</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="soupsCount"></div>
         </div>
       </div>
     </div> 
@@ -60,7 +60,7 @@
         <a href="#"><div class="circle-tile-heading green"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content green">
           <div class="circle-tile-description text-faded">Main Dishes</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="mainDishesCount"></div>
         </div>
       </div>
     </div> 
@@ -70,7 +70,7 @@
         <a href="#"><div class="circle-tile-heading purple"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content purple">
           <div class="circle-tile-description text-faded">Desserts</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="dessertsCount"></div>
         </div>
       </div>
     </div> 
@@ -89,9 +89,9 @@
       </div>
     </div>
    <br>
-     <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark"> 
+   
 <table class="table">
-  <thead>
+    <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Username</th>
@@ -106,7 +106,7 @@
 
 </table>
 </div>
-</div>
+
 
 <br><br><br>  
 
@@ -116,18 +116,13 @@
 
 		<script th:inline="javascript">
 		/*<![CDATA[*/
-		/*<![CDATA[*/
 			$(document).ready(function(){
-				var dataA = null;
 				$.ajax({
 					type: "Get",
 					url: "/CulinaryRecipes/ajax/accountAll",
 					dataType: "json",
 					success: function(data){
-							dataA = data;
-							console.log(data);
 							for(i = 0; i < data.length; i++){
-								console.log(i +", username:" + data[i].username + ", email:" + data[i].email);
 								var el = '<tr><th scope="row">' + i +'</th><td>' + data[i].username + '</td><td>' + data[i].email + '</td><td>User</td><td><button type="button" class="btn btn-primary">Edit</button><button type="button" class="btn btn-danger">Delete</button></td></tr>';
 							    $(el).hide().prependTo('.wrap').fadeIn(1000);
 							    $(el).hide().prependTo('.wrap').fadeOut(1000);
@@ -138,16 +133,84 @@
 						}
 					});
 
-
 				$.ajax({
 					type: "Get",
 					url: "/CulinaryRecipes/ajax/accountcount",
 					dataType: "json",
 					success: function(data){
-								console.log("el: " + data);
 								var el = "<div>" +data + "</div>";
 							    $(el).hide().prependTo('#accountCount').fadeIn(1000);
 							    $(el).hide().prependTo('#accountCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/reciperCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#reciperCount').fadeIn(1000);
+							    $(el).hide().prependTo('#reciperCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/breakfastCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#breakfastCount').fadeIn(1000);
+							    $(el).hide().prependTo('#breakfastCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/soupsCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#soupsCount').fadeIn(1000);
+							    $(el).hide().prependTo('#soupsCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/mainDishesCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#mainDishesCount').fadeIn(1000);
+							    $(el).hide().prependTo('#mainDishesCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/dessertsCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#dessertsCount').fadeIn(1000);
+							    $(el).hide().prependTo('#dessertsCount').fadeOut(1000);
 						},
 					error: function(data){
 							console.log("Error");

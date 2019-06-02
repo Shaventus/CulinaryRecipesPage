@@ -35,7 +35,6 @@ public class CategoryService implements ICategoryService
 		try 
 		{
 			category.setName(categoryDto.getName());
-			category.setType(categoryDto.getType());
 			
 		}
 		catch(Exception ex) 

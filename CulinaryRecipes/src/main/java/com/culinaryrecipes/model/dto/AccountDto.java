@@ -5,6 +5,8 @@ import java.util.Date;
 import com.culinaryrecipes.model.Account;
 
 public class AccountDto {
+	
+	private int idAccount;
 
 	private String email;
 
@@ -26,6 +28,7 @@ public class AccountDto {
 		this.password = account.getPassword();
 		this.email = account.getEmail();
 		this.enabled = account.getEnabled();
+		this.idAccount = account.getIdAccount();
 	}
 
 	/**
@@ -89,6 +92,14 @@ public class AccountDto {
 	 */
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public int getIdAccount() {
+		return idAccount;
+	}
+
+	public void setIdAccount(int idAccount) {
+		this.idAccount = idAccount;
 	}
 	
 	

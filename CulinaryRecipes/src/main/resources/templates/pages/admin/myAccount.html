@@ -13,12 +13,23 @@
 	
   <div class="row">
    
+	<div class="col-lg-2 col-sm-6">
+      <div class="circle-tile ">
+        <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
+        <div class="circle-tile-content dark-blue">
+             <div class="circle-tile-description text-faded">Accounts</div>
+          <div class="circle-tile-number text-faded" id="accountCount"></div>
+        </div>
+      </div>
+    </div>
+    
+   
     <div class="col-lg-2 col-sm-6">
       <div class="circle-tile ">
         <a href="#"><div class="circle-tile-heading red"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content red">
-          <div class="circle-tile-description text-faded">My recipes</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-description text-faded">Recipes</div>
+          <div class="circle-tile-number text-faded " id="reciperCount"></div>
         </div>
       </div>
     </div> 
@@ -28,7 +39,7 @@
         <a href="#"><div class="circle-tile-heading blue"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content blue">
           <div class="circle-tile-description text-faded">Breakfast</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="breakfastCount"></div>
         </div>
       </div>
     </div> 
@@ -38,7 +49,7 @@
         <a href="#"><div class="circle-tile-heading orange"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content orange">
           <div class="circle-tile-description text-faded">Soups</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="soupsCount"></div>
         </div>
       </div>
     </div> 
@@ -48,7 +59,7 @@
         <a href="#"><div class="circle-tile-heading green"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content green">
           <div class="circle-tile-description text-faded">Main Dishes</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="mainDishesCount"></div>
         </div>
       </div>
     </div> 
@@ -58,17 +69,7 @@
         <a href="#"><div class="circle-tile-heading purple"><i class="fa fa-utensils fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content purple">
           <div class="circle-tile-description text-faded">Desserts</div>
-          <div class="circle-tile-number text-faded ">666</div>
-        </div>
-      </div>
-    </div> 
-    
-     <div class="col-lg-2 col-sm-6">
-      <div class="circle-tile ">
-        <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-thumbs-up fa-fw fa-3x"></i></div></a>
-        <div class="circle-tile-content dark-blue">
-          <div class="circle-tile-description text-faded">My likes</div>
-          <div class="circle-tile-number text-faded ">666</div>
+          <div class="circle-tile-number text-faded " id="dessertsCount"></div>
         </div>
       </div>
     </div>
@@ -78,7 +79,16 @@
 	
 	 <div class="jumbotron p-6 p-md-6 text-white rounded bg-dark">
 	<h4>Edit my data</h4>
-	
+	<h6>Password</h6>
+	<form class="form-inline" id="formSubmit">
+	  	<div class="form-group mx-sm-3 mb-2">
+	    	<label for="inputPassword2" class="sr-only">Password</label>
+	    	<input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+	  	</div>
+	  	<button class="btn btn-danger mb-2" type="submit" id="button1">Change password</button>
+	  	<div class="wrap">
+	  	</div>
+	</form>
 	
 	
 	</div>
@@ -86,6 +96,16 @@
 	 <div class="jumbotron p-6 p-md-6 text-black rounded bg-light">
 	<h4>My recipes</h4>
 	
+	    <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" type="text" id="search" name="" placeholder="Search...">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+    </div>
+   <br>
+   
 	</div>
 </div>
 
@@ -94,6 +114,122 @@
 <div class="container">
 	 <div th:replace="view/viewAdmin:: footer"></div>
 </div>  
+
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+			$(document).ready(function(){
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/accountcount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#accountCount').fadeIn(1000);
+							    $(el).hide().prependTo('#accountCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/reciperCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#reciperCount').fadeIn(1000);
+							    $(el).hide().prependTo('#reciperCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/breakfastCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#breakfastCount').fadeIn(1000);
+							    $(el).hide().prependTo('#breakfastCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/soupsCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#soupsCount').fadeIn(1000);
+							    $(el).hide().prependTo('#soupsCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/mainDishesCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#mainDishesCount').fadeIn(1000);
+							    $(el).hide().prependTo('#mainDishesCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+
+				$.ajax({
+					type: "Get",
+					url: "/CulinaryRecipes/ajax/dessertsCount",
+					dataType: "json",
+					success: function(data){
+								var el = "<div>" +data + "</div>";
+							    $(el).hide().prependTo('#dessertsCount').fadeIn(1000);
+							    $(el).hide().prependTo('#dessertsCount').fadeOut(1000);
+						},
+					error: function(data){
+							console.log("Error");
+						}
+					});
+				
+				$("#formSubmit").on('submit', function(e){
+					e.preventDefault();
+					$('.wrap').html('');
+					var password = $('#inputPassword2').val();
+					$.ajax({
+						type: "GET",
+						url: "/CulinaryRecipes/ajax/account/changePassword",
+						dataType: "json",
+						data:{
+							password : password
+							},
+						success: function(data){
+								var el = '<div class="alert alert-success" role="alert">Success</div>"';
+								$(el).hide().prependTo('.wrap').fadeIn(1000);
+								$(el).hide().prependTo('.wrap').fadeOut(1000);
+							},
+						error: function(data){
+								console.log("Error");
+								var el = '<div class="alert alert-success" role="alert">Error</div>"';
+								$(el).hide().prependTo('.wrap').fadeIn(1000);
+								$(el).hide().prependTo('.wrap').fadeOut(1000);
+							}
+						});
+				});
+			});
+     	 /*]]>*/
+		</script>  
  
 </body>	
 </html>	

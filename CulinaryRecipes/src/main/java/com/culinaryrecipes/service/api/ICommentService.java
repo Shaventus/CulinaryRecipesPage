@@ -10,5 +10,7 @@ public interface ICommentService {
 	void deleteByAccount(Account account);
 	
 	void deleteByComment(Comment comment);
+	
+	int getCount();
 
 }
